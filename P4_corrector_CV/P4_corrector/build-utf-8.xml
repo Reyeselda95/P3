@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="prog3-3-13-14" default="ejecuta" basedir=".">
+	<property name="projectname" value="prog3-3-13-14"/>
+
+	<property name="dir.javadoc" value="doc"/> <!-- libraries used -->
+	<property name="src" value="src"/> <!-- Sources -->
+	<property name="src.tests" value="test"/> <!-- Sources for tests-->
+	<property name="classes.tests" value="classes.test"/> <!-- Sources for tests-->
+	<property name="dist" value="dist"/> <!-- output of jar -->
+	<property name="lib" value="lib"/> <!-- libraries used -->
+	<property name="classes" value="classes"/> <!-- temporal classes compilation folder -->
+
+	<presetdef name="prog3.javac">
+	   	<javac sourcepath="" includeantruntime="false"/>
+        </presetdef>
+	
+	<target name="clean" description="Removes previous build">
+	  <delete includeemptydirs="true" failonerror="false">
+	    <fileset dir="${classes}"/>
+	  	<fileset dir="${classes.tests}"/>
+	  	<fileset dir="${dist}"/>
+	  	<fileset dir="${dir.javadoc}"/>
+	  </delete>
+	</target>
+
+	<target name="init" depends="clean">  
+		<mkdir dir="${classes}"/>
+		<mkdir dir="${dist}"/>
+		<mkdir dir="${classes.tests}"/>
+		<mkdir dir="${dir.javadoc}"/>
+	</target>
+	
+	
+	<target name="javadoc">
+	    <javadoc
+	           destdir="${dir.javadoc}"
+	           author="true"
+	           version="true"
+	           use="true"
+	    	Verbose="true"
+	    		windowtitle="${projectname} v.${version}"
+	       >
+
+	        <fileset dir="${src}" defaultexcludes="yes">
+	            <include name="**/*.java"/>
+	        </fileset>
+	    </javadoc>
+	</target>
+	
+	<path id="classpath">
+	    <!--<fileset dir="${lib}" includes="**/*.jar"/>-->
+		<pathelement location="${imcorejar}"/> 
+	</path>
+	
+	<target name="compile.tests"> 
+		<!-- <javac srcdir="${src.tests}" destdir="${classes.tests}" classpath="lib/junit.jar:${classes}"
+		failonerror="false" >
+	  		<classpath>
+		  		<path refid="classpath"/>
+		  		<pathelement location="${classes.tests}"/>
+	  		</classpath>
+			</javac>
+		-->
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	         <compilerarg line="-encoding utf-8"/>
+	             <include name="**/CoordenadaTest.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	         <compilerarg line="-encoding utf-8"/>
+	             <include name="**/Coordenada2DTest.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	             <include name="**/Patron2DTest.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	             <include name="**/ReglaConwayP2Test.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	             <include name="**/Tablero2DTest.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	             <include name="**/TableroCeldasCuadradasTest.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	             <include name="**/Juego2DTest.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	         <compilerarg line="-encoding utf-8"/>
+	             <include name="**/Coordenada1DTest.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	         <compilerarg line="-encoding utf-8"/>
+	             <include name="**/Tablero1DP3Test.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+	                   
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	             <include name="**/Patron1DP3Test.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	             <include name="**/TableroP3Test.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	             <include name="**/Juego1DP3Test.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	         <compilerarg line="-encoding utf-8"/>
+	             <include name="**/Regla30Test.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+
+	<prog3.javac sourcepath="" srcdir="${src.tests}" includeantruntime="false"
+	         destdir="${classes.tests}"
+	         classpath="lib/junit.jar:${classes}" failonerror="false"
+	         listfiles="true">
+	         <compilerarg line="-encoding utf-8"/>
+	             <include name="**/ExcepcionesSuiteTest.java"/>
+	               <!--  <exclude name="**/Example.java"/> -->
+	                   </prog3.javac>
+	
+	</target>
+	
+	                   
+	<target name="unittest" depends="compile.tests">
+	<junit printsummary="yes" haltonfailure="no" maxmemory="1024m">
+  		<classpath>
+	  		<path refid="classpath"/>
+	  		<pathelement location="${classes.tests}"/>
+    		<pathelement path="lib/junit.jar:lib/xerces.jar:${classes}"/>
+		</classpath>
+
+	  <formatter type="plain"/>
+
+  	<batchtest fork="false" todir=".">
+    	<fileset dir="${src.tests}">
+      		<include name="**/*Test*.java"/>
+		      <exclude name="**/AllTests.java"/>
+	    </fileset>
+	  </batchtest>
+	</junit>
+
+	</target>
+	
+	<target name="compile" depends="init"> 
+		<!-- Compile the java code -->		          
+		<prog3.javac optimize="true" srcdir="${src}" destdir="${classes}" classpathref="classpath">
+		<!--	<compilerarg line="-encoding ISO-8859-1"/> -->
+			<compilerarg line="-encoding utf-8"/>
+		</prog3.javac>
+	</target>
+	
+	<target name ="makejar" depends="compile, unittest" description="Create a jar for the project">
+		     <jar jarfile="${dist}/${projectname}.jar" includes="**/*.class" basedir="${classes}"/>	         
+	</target>
+	
+	<target name="checkdoc" description="Checks source files for missing documentation."
+	depends="init">
+
+		<!-- <echo message="Source exists ${source.exists}" /> -->
+		<taskdef resource="checkstyletask.properties"
+        	 classpath="checkstyle/checkstyle-5.4-all.jar"/>
+         
+		<checkstyle config="checkstyle/sun_checks.xml">
+  			<fileset dir="${src}/modelo" includes="**/*.java"/>
+		</checkstyle>
+		<!-- <fail message="checkdoc failed!"/> -->
+	</target>
+	
+	<!-- <target name="checkdoc.fail" description="Echo message if no source files to check"
+	depends="source.check" unless="source.exists">
+		<echo message="checkstyle FAILED"/>
+	</target>
+
+ 	<target name="source.check">
+		<echo message="CHECK"/>
+      		<condition property="source.exists">
+			<and>
+ 	           		<available property="s1" file="${src}/modelo/Cordenada.java"
+ 	           		type="file"/>
+ 	           		<available property="s2" file="${src}/modelo/ReglaConway.java"
+ 	           		type="file"/>
+ 	           		<available property="s3" file="${src}/modelo/Patron.java"
+ 	           		type="file"/>
+ 	           		<available property="s4" file="${src}/modelo/EstadoCeldas.java"
+ 	           		type="file"/>
+ 	           		<available property="s5" file="${src}/modelo/Tablero.java"
+ 	           		type="file"/>
+				<available property="s6" file="${src}/modelo/Juego.java"
+ 	           		type="file"/>
+			</and>
+			
+                 </condition> 
+        </target>
+        -->     
+             
+	<target name="ejecuta" depends="makejar, checkdoc">
+		<java classname="mains.Main3C1314" output="salida.out" error="error.out">
+			<classpath>
+				<pathelement location="${dist}/${projectname}.jar"/>
+			</classpath>			
+		</java>
+	</target>
+</project> 

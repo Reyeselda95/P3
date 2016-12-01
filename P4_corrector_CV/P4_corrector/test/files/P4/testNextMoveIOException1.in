@@ -1,0 +1,13 @@
+put I
+rotate clockwise
+put J
+rotate counterclockwise
+put L
+move right
+put O
+move left
+put S
+move down
+put T
+move down
+put M

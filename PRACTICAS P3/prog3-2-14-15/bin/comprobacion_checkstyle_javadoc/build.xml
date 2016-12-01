@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="compruebajavadoc" default="checkdoc" basedir=".">
+	<property name="projectname" value="prog3"/>
+
+	<target name="checkdoc" description="Checks source files for missing documentation.">
+
+		<!-- <echo message="Source exists ${source.exists}" /> -->
+		<taskdef resource="checkstyletask.properties"
+        	 classpath="checkstyle/checkstyle-5.4-all.jar"/>
+         
+		<checkstyle config="checkstyle/sun_checks.xml">
+  			<fileset dir="${src}/model" includes="**/*.java"/>
+		</checkstyle>
+		<!-- <fail message="checkdoc failed!"/> -->
+	</target>
+</project> 

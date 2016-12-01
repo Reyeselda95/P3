@@ -1,0 +1,247 @@
+--------------
+PROGRAMACION 3
+--------------
+
+**** Curso 2014-2015
+
+Corrección de prácticas de programación.
+
+**** Práctica 2
+
+La práctica es evaluada mediante pruebas unitarias JUnit 4.
+
+Este corrector utiliza la herramienta 'ant' (similar a 'make' de C/C++) para
+compilar y ejecutar las pruebas. Puedes encontrar un manual de 'ant' aquí:
+
+http://es.wikibooks.org/wiki/Manual_b%C3%A1sico_de_ANT
+
+Aunque no es estrictamente necesario para las prácticas, te vendrá bien
+conocer como funciona 'ant' y como se escribe un fichero de configuración
+(llamado por defecto 'build.xml') para 'ant'. Esto te permitirá configurar
+tu propia forma de compilar y ejecutar pruebas.
+
+Este corrector utiliza la herramienta 'checkstyle' para evaluar la
+documentación en formato 'javadoc'.
+
+*** Uso del corrector
+
+$ ./corrige.sh tupractica.tgz
+
+*** Evaluación
+
+La práctica se ha evaluado con 5 conjuntos de pruebas JUnit (testsuite) y una prueba de
+documentación:
+
+Testsuite: model.CoordinateTest (práctica 1)	 1 puntos
+Testsuite: model.PieceTestP2			 2.0 puntos
+Testsuite: model.GameboardTestP2		 2.5 punto
+Testsuite: model.GameTestP2			 3.5 puntos		
+Prueba de documentación javadoc			 1 punto
+
+Total: 10
+
+Los conjuntos de pruebas Junit se compilan por separado. 
+Si la práctica no compila con alguno de ellos, la nota en ese apartado es cero. Cada aviso
+de documentación errónea resta 0.1 puntos, hasta un máximo de diez avisos.
+
+Recuerda que esta práctica contribuye en un 20% a la nota final de
+prácticas.
+
+Recuerda también lo importante que es respetar los nombres (mayúsculas y
+minúsculas incluídas), visibilidad y carácter estático, si procede, de las
+clases, atributos y métodos de los enunciados para que tu código sea
+evaluable. Del mismo modo debes respetar la estructura de paquetes de las
+prácticas. El nombre de los argumentos de los métodos puede cambiar, pero
+debe ser el mismo en el código y en los comentarios javadoc para evitar
+avisos de documentación errónea.
+
+
+--------------------------
+Resultado de la corrección
+--------------------------
+
+Al ejecutar el script, saldrá por la salida estándar algo similar a lo siguiente, para una
+práctica sin errores:
+
+----------- INICIO SALIDA ----------
+model/Piece.java
+model/Rotation.java
+model/Coordinate.java
+model/Game.java
+mains/Main2C1415.java
+model/Gameboard.java
+Buildfile: /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/build.xml
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/classes
+    [mkdir] Created dir: /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/dist
+    [mkdir] Created dir: /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/classes.test
+    [mkdir] Created dir: /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/doc
+
+compile:
+[prog3.javac] Compiling 6 source files to /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/classes
+
+compile.tests:
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/test/model/CoordinateTest.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/test/model/PieceTestP2.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/test/model/GameboardTestP2.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/test/model/GameTestP2.java
+
+unittest:
+    [junit] Running model.CoordinateTest
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0,049 sec
+    [junit] Running model.CoordinateTest
+    [junit] Running model.GameTestP2
+    [junit] Tests run: 18, Failures: 0, Errors: 0, Time elapsed: 0,266 sec
+    [junit] Running model.GameboardTestP2
+    [junit] Tests run: 28, Failures: 0, Errors: 0, Time elapsed: 0,204 sec
+    [junit] Running model.PieceTestP2
+    [junit] Tests run: 15, Failures: 0, Errors: 0, Time elapsed: 0,111 sec
+
+makejar:
+      [jar] Building jar: /home/jgonzalo/PROG3/curso2014_2015/correctores/P2_corrector/dist/prog3-2-14-15.jar
+
+checkdoc:
+[checkstyle] Running Checkstyle 5.6 on 5 files
+
+ejecuta:
+
+BUILD SUCCESSFUL
+Total time: 7 seconds
+Resultado del alumno: 
+NOTAS JUNIT
+  model.CoordinateTest: 1 (max. 1)
+  model.PieceTestP2: 2 (max. 2.0)
+  model.GameboardTestP2: 2.5 (max. 2.5)
+  model.GameTestP2: 3.5 (max. 3.5)
+  TOTAL tests JUnit: 9.0
+NOTA JAVADOC
+1
+NOTA TOTAL
+10
+
+
+-------- FIN SALIDA ----------
+
+Los apartados más importantes son:
+
+- compile: compilación de tu código fuente
+
+- compile.tests: compilación de las pruebas unitarias. Depende de tu código fuente.
+
+- unittest: 
+Ejecución de las pruebas unitarias. Si aparece 0 en 'Failures' y
+'Errors', enhorabuena, tu práctica está perfecta, en cuanto al código se
+refiere.
+
+- ejecuta: resumen de la ejecución y nota obtenida. 
+
+Fichero anterror
+----------------
+
+Contiene mensajes de error durante la ejecución de 'ant'. De aquí se sacan
+los errores de documentación. Ejemplo de fichero 'anterror':
+
+---- INICIO -----
+[checkstyle] /home/practicas/corrector_P1/src/modelo/Coordinate.java:11:9: warning: Falta el comentario Javadoc.
+[checkstyle] /home/practicas/corrector_P1/src/modelo/Coordinate.java:12:9: warning: Falta el comentario Javadoc.
+[checkstyle] /home/practicas/corrector_P1/src/modelo/Coordinate.java:14:9: warning: Falta el comentario Javadoc.
+[checkstyle] /home/practicas/corrector_P1/src/modelo/Coordinate.java:22:32: warning: Se esperaba la etiqueta @param para 'letra'.
+[checkstyle] /home/practicas/corrector_P1/src/modelo/Coordinate.java:22:43: warning: Se esperaba la etiqueta @param para 'y'.
+----- FIN -----
+
+Las líneas donde aparece [checkstyle] son mensajes de error sobre la
+documentación.
+
+Ficheros TEST-*.txt
+-------------------
+
+Contienen el resultado de las pruebas unitarias. 
+
+  * Si algun test no compila, en estos archivos aparecera una excepcion de tipo java.lang.ClassNotFoundException
+  * La ejecucion de un test produce en la salida (o en los archivos TEST*.txt) lineas como las siguientes:
+
+----- INICIO -----
+Testsuite: model.CoordinateTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0,288 sec
+
+Testcase: testToString took 0,009 sec
+Testcase: testAdd took 0,003 sec
+Testcase: testGetters took 0,003 sec
+Testcase: testInicializacion took 0,002 sec
+Testcase: testEquals took 0,002 sec
+----- FIN -----
+
+Testsuite es el fichero de pruebas utilizado (puede haber varios). En este
+caso, contiene 5 pruebas (Testcase), correspondientes a sendos métodos @Test. En el ejemplo
+todas las pruebas se han ejecutado con éxito (el nombre de las pruebas corresponde a cada 
+uno de los métodos @Test).
+
+
+Fichero salida.out
+------------------
+
+Contiene la salida estándar de la práctica, al ejecutarla con modelo.Main2C1415 (no se evalúa en esta práctica)
+
+Fichero error.out
+-----------------
+
+Contiene la salida de error de la práctica, al ejecutarla con modelo.Main2C1415 (no se evalúa en esta práctica)
+
+Directorio 'src'
+----------------
+
+Contiene el código fuente de la práctica, extraído del archivo .tgz
+
+Directorio 'doc'
+----------------
+
+Aquí se genera la documentación
+
+Directorio 'test'
+-----------------
+Contiene los tests junit (testsuite) que comprueban tu práctica dentro del paquete 'model'.
+Además dentro de test/ hay un directorio "ficheros" donde se guardan los ficheros necesarios para la ejecución de los tests.
+Los ficheros con extensión:
+  - .sol -> Ficheros de entrada con la ejecución correcta para compararla con la que genere el alumno.
+  - .alu -> Son ficheros de salida generados por el alumno para facilitarle un seguimiento de su ejecución en caso de error
+
+Directorios 'classes' y 'classes.test'
+--------------------------------------
+
+Contiene los ficheros .class resultado de compilar los ficheros fuente de la
+práctica y de los test, respectivamente. 
+
+Ficheros de notas
+-----------------------
+
+nota_junit.txt		Contiene las notas de las pruebas unitarias
+nota_doc.txt		Contiene la nota de la documentación
+nota_total.txt		Contiene la nota total
+
+Más cosas
+---------
+
+Una vez has ejecutado al menos una vez el script corrige.sh:
+
+Para crear la documentacion de tu practica:
+
+        > lib/apache-ant-1.9.2/bin/ant javadoc
+
+Para ejecutar la prueba de documentacion solamente:
+
+        > lib/apache-ant-1.9.2/bin/ant checkdoc
+
+Para compilar los archivos en src/ solamente
+
+        > lib/apache-ant-1.9.2/bin/ant compile
+
+Para ejecutar los test unitarios solamente:
+
+        > lib/apache-ant-1.9.2/bin/ant unittest

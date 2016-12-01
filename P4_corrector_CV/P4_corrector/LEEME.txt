@@ -1,0 +1,389 @@
+--------------
+PROGRAMACION 3
+--------------
+
+**** Curso 2014-2015
+
+Corrección de prácticas de programación.
+
+**** Práctica 4
+
+La práctica es evaluada mediante pruebas unitarias JUnit 4.
+
+Este corrector utiliza la herramienta 'ant' (similar a 'make' de C/C++) para
+compilar y ejecutar las pruebas. Puedes encontrar un manual de 'ant' aquí:
+
+http://es.wikibooks.org/wiki/Manual_b%C3%A1sico_de_ANT
+
+Aunque no es estrictamente necesario para las prácticas, te vendrá bien
+conocer como funciona 'ant' y como se escribe un fichero de configuración
+(llamado por defecto 'build.xml') para 'ant'. Esto te permitirá configurar
+tu propia forma de compilar y ejecutar pruebas.
+
+Este corrector utiliza la herramienta 'checkstyle' para evaluar la
+documentación en formato 'javadoc'.
+
+*** Uso del corrector
+
+$ ./corrige.sh tupractica.tgz
+
+*** Evaluación
+
+La práctica se ha evaluado con 22 conjuntos de pruebas JUnit (testsuite) y una prueba de
+documentación:
+	
+Testsuite: model.CoordinateTest			 0.05 puntos
+Testsuite: model.PieceTestP2: 			 0.3 puntos
+Testsuite: model.GameboardTestP2:  		 0.4 puntos
+Testsuite: model.GameTestP2:			 0.4 puntos
+Testsuite: model.JPieceTestP3:			 0.05 puntos
+Testsuite: model.LPieceTestP3:			 0.05 puntos
+Testsuite: model.OPieceTestP3:  		 0.05 puntos
+Testsuite: model.SPieceTestP3:  		 0.05 puntos
+Testsuite: model.ZPieceTestP3:  		 0.05 puntos
+Testsuite: model.TPieceTestP3: 			 0.05 puntos
+Testsuite: model.GameboardTestP3: 		 0.5 puntos
+Testsuite: model.GameTestP3:  			 1.0 puntos
+Testsuite: model.PieceFactoryTestP3:  		 0.05 puntos
+Testsuite: model.GameboardExceptionsTestP3: 	 0.5 puntos
+Testsuite: model.GameExceptionsTestP3: 		 0.5 puntos
+Testsuite: model.io.GamePlayTestP4:  		 2.5 puntos
+Testsuite: model.io.PlayerFactoryTestP4: 	 0.5 puntos
+Testsuite: model.io.PlayerFileTestP4: 		 0.5 puntos
+Testsuite: model.io.PlayerRandomTestP4:  	 0.25 puntos
+Testsuite: model.io.PlayerStringTestP4:  	 0.5 puntos
+Testsuite: model.io.VisualizerConsoleTestP4: 	 0.5 puntos
+Testsuite: model.io.VisualizerFactoryTestP4:	 0.25 puntos	
+Prueba de documentación javadoc			 1 punto
+
+Total: 10
+
+Los conjuntos de pruebas Junit se compila por separado. 
+Si la práctica no compila con alguno de ellos, la nota en ese apartado es cero. Cada aviso
+de documentación errónea resta 0.1 puntos, hasta un máximo de diez avisos.
+
+Recuerda que esta práctica contribuye en un 30% a la nota final de
+prácticas.
+
+Recuerda también lo importante que es respetar los nombres (mayúsculas y
+minúsculas incluídas), visibilidad y carácter estático, si procede, de las
+clases, atributos y métodos de los enunciados para que tu código sea
+evaluable. Del mismo modo debes respetar la estructura de paquetes de las
+prácticas. El nombre de los argumentos de los métodos puede cambiar, pero
+debe ser el mismo en el código y en los comentarios javadoc para evitar
+avisos de documentación errónea.
+
+
+--------------------------
+Resultado de la corrección
+--------------------------
+
+Al ejecutar el script, saldrá por la salida estándar algo similar a lo siguiente, para una
+práctica sin errores:
+
+----------- INICIO SALIDA ----------
+model/io/VisualizerFactory.java
+model/Coordinate.java
+model/io/MainEntregaP4.java
+model/io/PlayerString.java
+model/exceptions/
+model/BoardInitialiser.java
+model/exceptions/TetrisException.java
+model/
+model/exceptions/io/
+model/JPiece.java
+model/LPiece.java
+model/PieceFactory.java
+model/io/IPlayer.java
+model/TPiece.java
+model/exceptions/FixedPieceMovementException.java
+model/io/PlayerFile.java
+model/ZPiece.java
+model/exceptions/CollisionMovementException.java
+model/exceptions/GameEndedMovementException.java
+model/Gameboard.java
+model/exceptions/CurrentPieceNotFixedException.java
+model/Piece.java
+model/exceptions/MovementException.java
+model/exceptions/io/TetrisIOException.java
+model/Rotation.java
+model/OPiece.java
+model/IPiece.java
+model/SPiece.java
+model/io/PlayerRandom.java
+model/exceptions/WrongSizeException.java
+model/io/VisualizerConsole.java
+model/io/PlayerFactory.java
+model/io/GamePlay.java
+model/CellState.java
+model/io/IVisualizer.java
+model/exceptions/OffBoardMovementException.java
+model/exceptions/NoCurrentPieceException.java
+model/Game.java
+model/io/
+Buildfile: /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/build.xml
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes
+    [mkdir] Created dir: /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/dist
+    [mkdir] Created dir: /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+    [mkdir] Created dir: /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/doc
+
+compile:
+[prog3.javac] Compiling 35 source files to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes
+
+compile.tests:
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/CoordinateTest.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/PieceTestP2.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/GameboardTestP2.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/GameTestP2.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/JPieceTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/LPieceTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/OPieceTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/SPieceTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/ZPieceTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/TPieceTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/GameboardTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/GameExceptionsTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/PieceFactoryTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/GameboardExceptionsTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/GameTestP3.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/io/GamePlayTestP4.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/io/PlayerFactoryTestP4.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/io/PlayerFileTestP4.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/io/PlayerRandomTestP4.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/io/PlayerStringTestP4.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/io/VisualizerConsoleTestP4.java
+[prog3.javac] Compiling 1 source file to /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/classes.test
+[prog3.javac] /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/test/model/io/VisualizerFactoryTestP4.java
+
+unittest:
+    [junit] Running model.CoordinateTest
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0,05 sec
+    [junit] Running model.GameExceptionsTestP3
+    [junit] Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0,044 sec
+    [junit] Running model.GameTestP2
+    [junit] Tests run: 18, Failures: 0, Errors: 0, Time elapsed: 0,229 sec
+    [junit] Running model.GameTestP3
+    [junit] Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 0,109 sec
+    [junit] Running model.GameboardExceptionsTestP3
+    [junit] Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0,012 sec
+    [junit] Running model.GameboardTestP2
+    [junit] Tests run: 28, Failures: 0, Errors: 0, Time elapsed: 0,043 sec
+    [junit] Running model.GameboardTestP3
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0,003 sec
+    [junit] Running model.JPieceTestP3
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0,013 sec
+    [junit] Running model.LPieceTestP3
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0,007 sec
+    [junit] Running model.OPieceTestP3
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0,006 sec
+    [junit] Running model.PieceFactoryTestP3
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0,012 sec
+    [junit] Running model.PieceTestP2
+    [junit] Tests run: 12, Failures: 0, Errors: 0, Time elapsed: 0,009 sec
+    [junit] Running model.SPieceTestP3
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0,013 sec
+    [junit] Running model.TPieceTestP3
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0,006 sec
+    [junit] Running model.ZPieceTestP3
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0,011 sec
+    [junit] Running model.io.GamePlayTestP4
+    [junit] Tests run: 18, Failures: 0, Errors: 0, Time elapsed: 2,075 sec
+    [junit] Running model.io.PlayerFactoryTestP4
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0,006 sec
+    [junit] Running model.io.PlayerFileTestP4
+    [junit] Tests run: 7, Failures: 0, Errors: 0, Time elapsed: 0,019 sec
+    [junit] Running model.io.PlayerRandomTestP4
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0,002 sec
+    [junit] Running model.io.PlayerStringTestP4
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0,003 sec
+    [junit] Running model.io.VisualizerConsoleTestP4
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0,004 sec
+    [junit] Running model.io.VisualizerFactoryTestP4
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0,002 sec
+
+makejar:
+      [jar] Building jar: /home/jgonzalo/PROG3/curso2014_2015/correctores/P4_corrector/dist/prog3-4-14-15.jar
+
+checkdoc:
+[checkstyle] Running Checkstyle 5.6 on 35 files
+
+ejecuta:
+
+BUILD SUCCESSFUL
+Total time: 8 seconds
+Resultado del alumno: 
+NOTAS JUNIT
+  model.CoordinateTest: 0.05 (max. 0.05)
+  model.PieceTestP2: 0.3 (max. 0.3)
+  model.GameboardTestP2: 0.4 (max. 0.4)
+  model.GameTestP2: 0.4 (max. 0.4)
+  model.JPieceTestP3: 0.05 (max. 0.05)
+  model.LPieceTestP3: 0.05 (max. 0.05)
+  model.OPieceTestP3: 0.05 (max. 0.05)
+  model.SPieceTestP3: 0.05 (max. 0.05)
+  model.ZPieceTestP3: 0.05 (max. 0.05)
+  model.TPieceTestP3: 0.05 (max. 0.05)
+  model.GameboardTestP3: 0.5 (max. 0.5)
+  model.GameTestP3: 1 (max. 1.0)
+  model.PieceFactoryTestP3: 0.05 (max. 0.05)
+  model.GameboardExceptionsTestP3: 0.5 (max. 0.5)
+  model.GameExceptionsTestP3: 0.5 (max. 0.5)
+  model.io.GamePlayTestP4: 2.5 (max. 2.5)
+  model.io.PlayerFactoryTestP4: 0.5 (max. 0.5)
+  model.io.PlayerFileTestP4: 0.5 (max. 0.5)
+  model.io.RandomPlayerTestP4: (max. 0.25)
+  model.io.PlayerStringTestP4: 0.5 (max. 0.5)
+  model.io.VisualizerConsoleTestP4: 0.5 (max. 0.5)
+  model.io.VisualizerFactoryTestP4: 0.25 (max. 0.25)
+  TOTAL tests JUnit: 9.00
+NOTA JAVADOC
+1
+NOTA TOTAL
+10
+
+
+-------- FIN SALIDA ----------
+
+Los apartados más importantes son:
+
+- compile: compilación de tu código fuente
+
+- compile.tests: compilación de las pruebas unitarias. Depende de tu código fuente.
+
+- unittest: 
+Ejecución de las pruebas unitarias. Si aparece 0 en 'Failures' y
+'Errors', enhorabuena, tu práctica está perfecta, en cuanto al código se
+refiere.
+
+- ejecuta: resumen de la ejecución y nota obtenida. Por ejemplo
+
+Fichero anterror
+----------------
+
+Contiene mensajes de error durante la ejecución de 'ant'. De aquí se sacan
+los errores de documentación. Ejemplo de fichero 'anterror':
+
+---- INICIO -----
+[checkstyle] /home/practicas/corrector_P1/src/modelo/Coordinate.java:11:9: warning: Falta el comentario Javadoc.
+[checkstyle] /home/practicas/corrector_P1/src/modelo/Coordinate.java:12:9: warning: Falta el comentario Javadoc.
+[checkstyle] /home/practicas/corrector_P1/src/modelo/Coordinate.java:14:9: warning: Falta el comentario Javadoc.
+[checkstyle] /home/practicas/corrector_P1/src/modelo/Coordinate.java:22:32: warning: Se esperaba la etiqueta @param para 'letra'.
+[checkstyle] /home/practicas/corrector_P1/src/modelo/Coordinate.java:22:43: warning: Se esperaba la etiqueta @param para 'y'.
+----- FIN -----
+
+Las líneas donde aparece [checkstyle] son mensajes de error sobre la
+documentación.
+
+Ficheros TEST-*.txt
+-------------------
+
+Contienen el resultado de las pruebas unitarias. 
+
+  * Si algun test no compila, en estos archivos aparecera una excepcion de tipo java.lang.ClassNotFoundException
+  * La ejecucion de un test produce en la salida (o en los archivos TEST*.txt) lineas como las siguientes:
+
+----- INICIO -----
+Testsuite: model.CoordinateTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0,288 sec
+
+Testcase: testToString took 0,009 sec
+Testcase: testAdd took 0,003 sec
+Testcase: testGetters took 0,003 sec
+Testcase: testInicializacion took 0,002 sec
+Testcase: testEquals took 0,002 sec
+----- FIN -----
+
+Testsuite es el fichero de pruebas utilizado (puede haber varios). En este
+caso, contiene 22 pruebas (Testcase), correspondientes a sendos métodos @Test. En el ejemplo
+todas las pruebas se han ejecutado con éxito (el nombre de las pruebas corresponde a cada 
+uno de los métodos @Test).
+
+
+Fichero salida.out
+------------------
+
+Contiene la salida estándar de la práctica, al ejecutarla con modelo.Main4C1415 (no se evalúa en esta práctica)
+
+Fichero error.out
+-----------------
+
+Contiene la salida de error de la práctica, al ejecutarla con modelo.Main4C1415 (no se evalúa en esta práctica)
+
+Directorio 'src'
+----------------
+
+Contiene el código fuente de la práctica, extraído del archivo .tgz
+
+Directorio 'doc'
+----------------
+
+Aquí se genera la documentación
+
+Directorio 'test'
+-----------------
+Contiene los tests junit (testsuite) que comprueba tu práctica dentro del paquete 'modelo'.
+Además dentro de test hay tres directorios "ficheros/P2", "ficheros/P3" y "ficheros/P3" donde 
+se guardan los ficheros necesarios para la ejecución de los tests referentes a la prácticas 2, 3 y 4  respectivamente.
+Los ficheros con extensión:
+  - .sol -> Ficheros de entrada con la ejecución correcta para compararla con la que genere el alumno.
+  - .alu -> Son ficheros de salida generados por el alumno para facilitarle un seguimiento de su 		ejecución en caso de error
+  - .ini -> Ficheros de entrada de datos para la ejecución del test
+
+Directorios 'classes' y 'classes.test'
+--------------------------------------
+
+Contiene los ficheros .class resultado de compilar los ficheros fuente de la
+práctica y de los test, respectivamente. 
+
+Ficheros de notas
+-----------------------
+
+nota_junit.txt		Contiene las notas de las pruebas unitarias
+nota_doc.txt		Contiene la nota de la documentación
+nota_total.txt		Contiene la nota total
+
+Más cosas
+---------
+
+Una vez has ejecutado al menos una vez el script corrige.sh:
+
+Para crear la documentacion de tu practica:
+
+        > apache-ant-1.8.2/bin/ant javadoc
+
+Para ejecutar la prueba de documentacion solamente:
+
+        > apache-ant-1.8.2/bin/ant checkdoc
+
+Para compilar los archivos en src/ solamente
+
+        > apache-ant-1.8.2/bin/ant compile
+
+Para ejecutar los test unitarios solamente:
+
+        > apache-ant-1.8.2/bin/ant unittest
