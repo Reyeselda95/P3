@@ -7,7 +7,7 @@ import model.io.GamePlay;
 /**
  * Clase Score: Representa la puntuación de jugadores
  *
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */

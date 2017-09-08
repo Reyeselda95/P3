@@ -3,7 +3,7 @@ package model.exceptions;
 /**
  * Clase NoCurrentPieceException: devuelve un mensaje de error indicando que, como el juego no ha comenzado, no hay piezas en el tablero
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */

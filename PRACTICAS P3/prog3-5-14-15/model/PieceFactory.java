@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * PieceFactory es una clase que crea una pieza de un tipo en concreto según se pase por parámetro una cosa u otra
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */

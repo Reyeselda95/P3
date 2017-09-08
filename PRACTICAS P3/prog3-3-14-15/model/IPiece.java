@@ -3,7 +3,7 @@ package model;
 /**
  * Clase IPiece: Es una clase que hereda las propiedades de la clase Piece, declarando su propia shape y sus getters
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */

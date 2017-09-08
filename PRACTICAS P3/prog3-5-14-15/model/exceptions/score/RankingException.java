@@ -5,7 +5,7 @@ import model.exceptions.TetrisException;
 /**
  * Clase RankingException: Devuelve un mensaje de error debido a un error en el Ranking al estar este vacío
  *
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */

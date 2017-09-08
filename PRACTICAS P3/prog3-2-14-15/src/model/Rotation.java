@@ -3,7 +3,7 @@ package model;
 /**
  * Clase Rotation: Representa la orientación de cada una de las piezas del juego
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR
  *         correo ara65@alu.ua.es
  * 
  */

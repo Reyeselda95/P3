@@ -3,7 +3,7 @@ package model.exceptions;
 /**
  * Clase CurrentPieceNotFixedException:Devuelve un mensaje que indica que la pieza actual no está fija
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */

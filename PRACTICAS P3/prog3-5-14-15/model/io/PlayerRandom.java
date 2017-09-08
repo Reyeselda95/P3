@@ -8,7 +8,7 @@ import model.exceptions.io.TetrisIOException;
 /**
  * Clase PlayerRandom: Representa a un jugador aleatorio.
  *
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  */
 public class PlayerRandom implements IPlayer{

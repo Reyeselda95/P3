@@ -5,7 +5,7 @@ import model.Coordinate;
 /**
  * Clase WrongSizeException: devuelve un mensaje de error debido a que se ha intentado crear un tablero tan pequeño que no se puede introducir una pieza
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */

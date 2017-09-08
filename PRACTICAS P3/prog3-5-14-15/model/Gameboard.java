@@ -9,7 +9,7 @@ import model.exceptions.WrongSizeException;
 /**
  * Clase Gameboard: Representa el entorno en el que se desarrolla el juego
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  * 
  */

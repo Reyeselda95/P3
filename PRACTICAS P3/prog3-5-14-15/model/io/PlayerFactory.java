@@ -10,7 +10,7 @@ import model.exceptions.io.TetrisIOException;
 /**
  * Clase PlayerFactory: Es un método factory que crea objetos de las diferentes clases que implementan IPlayer.
  *
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  */
 public class PlayerFactory {

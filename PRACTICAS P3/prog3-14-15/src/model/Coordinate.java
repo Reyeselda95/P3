@@ -2,7 +2,7 @@ package model;
 
 /**
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  * @mail ara65@alu.ua.es
  * 
  */

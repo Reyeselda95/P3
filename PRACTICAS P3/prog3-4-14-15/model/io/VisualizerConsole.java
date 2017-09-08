@@ -9,7 +9,7 @@ import model.exceptions.WrongSizeException;
 /**
  * Clase VisualizerConsole: Representa el visualizador del juego actual por consola
  *
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */

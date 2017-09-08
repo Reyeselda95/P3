@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * Clase Coordinate: Representa las coordenadas de una pieza dentro de un juego
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  * 
  */

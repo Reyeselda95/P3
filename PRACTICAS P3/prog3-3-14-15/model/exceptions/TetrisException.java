@@ -3,7 +3,7 @@ package model.exceptions;
 /**
  * Clase TetrisException: Aparece cuando se da un error en el tetris
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR
  *         correo ara65@alu.ua.es
  *
  */

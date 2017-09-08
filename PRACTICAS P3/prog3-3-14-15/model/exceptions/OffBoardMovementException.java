@@ -5,7 +5,7 @@ import model.Coordinate;
 /**
  * Clase OffBoardMovementException: devuelve un mensaje de error cuando intentas mover una pieza a una posición en la que se sale del tablero
  * 
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */

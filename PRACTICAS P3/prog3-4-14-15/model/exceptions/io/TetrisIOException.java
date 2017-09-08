@@ -8,7 +8,7 @@ import model.exceptions.TetrisException;
  * 
  * Clase TetrisIOException: Representa Una excoción que lanzan las interfaces
  *
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */

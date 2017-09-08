@@ -9,7 +9,7 @@ import model.exceptions.io.TetrisIOException;
 /**
  * Clase PlayerFile: Represeta los movimientos de un jugador dados desde fichero.
  *
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  */
 public class PlayerFile implements IPlayer {

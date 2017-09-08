@@ -7,7 +7,7 @@ import model.exceptions.io.TetrisIOException;
 /**
  * Clase VisualizerFactory: Representa la fabrica que nos devuelve un visualizador del juego actual.
  *
- * @author ALEJANDRO REYES ALBILLAR 45931406-S
+ * @author ALEJANDRO REYES ALBILLAR 
  *         correo ara65@alu.ua.es
  *
  */
